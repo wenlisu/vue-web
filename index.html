@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理中心</title>
+</head>
+
+<body>
+    <link href="./src/assets/css/PB-ui.css" rel="stylesheet" type="text/css" />
+    <link href="./src/assets/css/PB-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="./src/assets/fonts/pinba/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="./src/assets/css/skin/default/skin.css" rel="stylesheet" type="text/css" />
+    <link href="./src/assets/js/kalendae/kalendae.css" rel="stylesheet" type="text/css" />
+    <link href="./src/assets/css/welcome.css" rel="stylesheet" type="text/css" />
+    <link href="./src/assets/js/datetimepicker/datetimepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="src/assets/css/prompt.css">
+    <link rel="stylesheet" type="text/css" href="src/assets/css/public.css">
+    <link rel="stylesheet" type="text/css" href="src/assets/js/skin/layer.css">
+    
+    <!--<link rel="stylesheet" type="text/css" href="src/assets/third-party/layui/css/layui.css">-->
+
+    <div id="J-start-loading" class="loader">
+        <div class="pacman">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+    </div>
+
+    <div id="app"></div>
+
+    <script src="./src/assets/js/jquery.js"></script>
+
+    <script>
+        $.ajaxSetup({
+            type: "POST",
+            dataType: 'JSON',
+            beforeSend:function (xhr) {
+                xhr.setRequestHeader("authorization", localStorage['token'])
+            },
+        });
+
+
+    </script>
+    <script src="./src/assets/js/layer.js"></script>
+    <script src="./src/assets/js/kalendae/kalendae.standalone.js"></script>
+    <script src="./src/assets/js/datetimepicker/datetimepicker.js"></script>
+    <script src="./src/assets/js/jquery-validate-1.15.js"></script>
+    <script src="./src/assets/js/Validform.js"></script>
+    <script src="./src/assets/js/page-plug.js"></script>
+    <script src="./src/assets/js/prompt.js"></script>
+    <script src="src/assets/js/echarts.min.js"></script>
+    <script src="src/assets/js/PB-ui.js"></script>
+
+    <!--<script src="src/assets/third-party/layui/layui.js"></script>-->
+    <script src="./dist/main.js"></script>
+    <script src="https://api.map.baidu.com/api?v=2.0&ak=BMvPNolfzSZK2FTuPPk0i9Lp&s=1"></script>
+    
+</body>
+
+</html>
